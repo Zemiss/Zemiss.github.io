@@ -1,31 +1,117 @@
-Welcome to my personal home page! This is my space to showcase myself.
+<!-- {% if site.google_scholar_stats_use_cdn %}
+{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
+{% else %}
+{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
+{% endif %}
+{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %} -->
 
-## About Me
+<style>
+  .badge {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+</style>
 
-Here is Bo Xie.
+<style>
+  .logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem; 
+  }
+  .logo-row img {
+    height: 100px;
+    width: auto;
+    /* 
+       border-radius: 6px;
+       box-shadow: 0 0 6px rgba(0,0,0,.15); */
+  }
+</style>
 
-I am a member of the Class of 2024 at Nankai University, and I feel honored to be part of the inaugural Digital Intelligence Experimental Class. My current research interests primarily focus on Deep Learning
+<style>
+  .site-footer {
+    text-align: center;
+    font-size: 0.85em;
+    color: rgb(128, 128, 128);
+    margin: 2rem 0 1rem; 
+  }
+  .site-footer a {
+    color: inherit;
+    text-decoration: underline;
+  }
+</style>
 
-## Project Experience
+<style>
+.project {
+  margin-bottom: 2em;
+}
 
-Research Assistant | Image RAW-domain Enhancement | Sept. 2024 – Present
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
 
-Model Reproduction: Successfully reproduced PMN (Enhancing Learnability for Low-Light RAW Image Denoising) and DnCNN (Denoising Convolutional Neural Network) architectures using Jittor, focusing on low-level vision tasks.
+.project-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
 
-Optimization & Experimentation: Improved DnCNN performance and training stability by modifying the architecture to include a noise level map and an integrated noise estimation network
+.project-role {
+  background-color: #d4edda; /* 浅绿色背景 */
+  color: #155724;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  margin-left: 1em;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
 
-Data Processing: Gained hands-on experience in processing RAW sensor data, including handling Bayer patterns, bit-depth conversion, and noise modeling.
+.project-time {
+  background-color: #e2e3e5; /* 浅灰色背景 */
+  color: #383d41;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+</style>
 
-Technical Stack: Python, PyTorch, NumPy, OpenCV, Linux (GPU Server management).
+<span class='anchor' id='about'></span>
 
-## Projects
+Hello everyone, my name is Bo Xie (谢博). I am currently an undergraduate student in the School of Mathematical Sciences, Nankai University.I am proud to be a member of the inaugural Shiing-Shen Chern Class (Mathematical Sciences and Artificial Intelligence), majoring in Mathematics and minoring in Artificial Intelligence. Please feel free to contact me through **1400695258@qq.com** if you are interested in my projects.
 
-Here you can view my latest projects and contributions on GitHub.
+My research interests lie in:
 
-## Contact
+- **RAW Image Denoising:**&nbsp;Low-light image enhancement, contrastive learning and so on.
 
-If you are interested in my research or would like to collaborate on Deep Learning projects, feel free to reach out:
 
-Email: 2411273@nankai.edu.cn
+I have organized the [Course Note](https://github.com/Zemiss/NKNote)，[Lab Report](https://github.com/Zemiss/NKLab) for the Mathematical Sciences and Artificial Intelligence major courses at Nankai University, as well as the [Final Exam](https://github.com/Zemiss/NKExam) for theoretical courses. So far, these resources have assisted over **0** students and accumulated more than **0** views.
 
-GitHub: @Zemiss
+
+<span class='anchor' id='publications'></span>
+
+# 📝 Publications 
+
+# 💰 Scholarships
+
+# 🏆 Competitions
+
+# ⚙️ Projects
+
+# 📖 Educations
+
+- *2024.09 - 2028.06*, **[School of Mathematical Sciences](https://math.nankai.edu.cn/)(数学科学学院), [Nankai University](https://www.nankai.edu.cn/)(南开大学)**
+
+  *- Major in Mathematics & Minor in Artificial Intelligence (主修数学，辅修人工智能)*
+
+<span class='anchor' id='academic-services'></span>
+
+# 💬 Academic Services
+
+# 💻 Internships
+
+
+</footer>
