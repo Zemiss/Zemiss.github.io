@@ -1,8 +1,8 @@
 {
- "github_url": "https://github.com/Zemiss",
+  "github_url": "https://github.com/Zemiss",
   "dark_mode": "auto",
   "name": "谢博",
-  "bio": "Python Developer",
+  "bio": "争渡，争渡！",
   "introduction_file": "Introduction.md",
   "theme": {
     "primary_color": "#6a11cb",
@@ -13,7 +13,7 @@
   "background": {
     "image": "background.png",
     "blur": 4,
-    "overlay_opacity": 0.6,
+    "overlay_opacity": 0.3,
     "overlay_color": "#f3f4f6",
     "dark_overlay_color": "#121212"
   },
