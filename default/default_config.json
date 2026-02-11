@@ -1,7 +1,7 @@
 {
- "github_url": "https://github.com/example",
+ "github_url": "https://github.com/Zemiss",
   "dark_mode": "auto",
-  "name": "Example User",
+  "name": "谢博",
   "bio": "Python Developer",
   "introduction_file": "Introduction.md",
   "theme": {
@@ -11,17 +11,16 @@
     "dark_secondary_color": "#60a5fa"
   },
   "background": {
-    "image": "background.jpg",
+    "image": "background.png",
     "blur": 4,
     "overlay_opacity": 0.6,
     "overlay_color": "#f3f4f6",
     "dark_overlay_color": "#121212"
   },
   "contact": {
-    "qq": "https://qm.qq.com/q/c7DY18rEju",
-    "wechat": "",
-    "bilibili": "https://space.bilibili.com/1969160969",
-    "douyin": "https://www.douyin.com/user/MS4wLjABAAAATzdjtBBrLLCn69TtPMeseuEUzztbNZzw-9f13adrfiM?relation=0&vid=7143257533807873316",
-    "xiaohongshu": "https://www.xiaohongshu.com/user/profile/6427cf87000000002901166e?xsec_token=YBcPhyaU45_o0XD1fWkS2AJAoXOxWm09mZUN0iNRSVK3E%3D&xsec_source=app_share&xhsshare=CopyLink&shareRedId=ODo0N0ZLPEA2NzUyOTgwNjg8OTg1OzxO&apptime=1760733353&share_id=f252abf542b54551b1c018c51f4a64c8&share_channel=copy_link"
+    "qq": "https://qm.qq.com/cgi-bin/qm/qr?k=n4Jlcmhl8epKd4aXNbVLxsj1eATX9rci&jump_from=webapi&authKey=bQyT8cAWIrtEQlLfJ8BbaYsZ1QMhh1nkRAXlh+HcbqQ/SpANAmd6YrN0mUKqx10s", 
+    "bilibili": "https://space.bilibili.com/1634342643",
+    "douyin": "https://www.douyin.com/user/MS4wLjABAAAAec2Fnw9tdFt0edfUyxM8IY_3e443O5VqDqq6iXVzP38",
+    "xiaohongshu": "https://www.xiaohongshu.com/user/profile/654fb0bc0000000008001845"
   }
 }
