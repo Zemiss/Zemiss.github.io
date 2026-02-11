@@ -37,4 +37,4 @@ docker-compose.yml
 # default/ 文件夹包含默认配置和背景图片，需要保留
 # templates/ 文件夹包含Flask模板，需要保留
 # config.json 会在应用启动时自动创建或从默认配置复制，不需要忽略
-# background.jpg 会在应用启动时自动创建或从默认配置复制，不需要忽略
+# background.png 会在应用启动时自动创建或从默认配置复制，不需要忽略

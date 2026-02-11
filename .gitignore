@@ -55,7 +55,7 @@ github_token.txt
 home/
 
 # 不需要的图片文件
-1background.jpg
+1background.png
 
 # 特定配置文件
 config_gmunitx.json

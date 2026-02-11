@@ -27,7 +27,7 @@ if os.path.exists(config_path):
     with open(config_path, 'r', encoding='utf-8') as f:
         config = json.load(f)
     # 从配置中获取背景图片文件名
-    background_image = config.get('background', {}).get('image', 'background.jpg')
+    background_image = config.get('background', {}).get('image', 'background.png')
 else:
     print("警告：未找到config.json文件")
     # 尝试从default文件夹复制默认配置
@@ -37,7 +37,7 @@ else:
         # 读取复制过来的配置
         with open(config_path, 'r', encoding='utf-8') as f:
             config = json.load(f)
-        background_image = config.get('background', {}).get('image', 'background.jpg')
+        background_image = config.get('background', {}).get('image', 'background.png')
         
         # 同时检查背景图片是否存在，如果不存在也从default文件夹复制
         if background_image and not os.path.exists(background_image) and os.path.exists(os.path.join('default', background_image)):
@@ -45,7 +45,7 @@ else:
             shutil.copy2(os.path.join('default', background_image), background_image)
     else:
         print("警告：default/default_config.json也不存在，使用默认背景图片")
-        background_image = 'background.jpg'
+        background_image = 'background.png'
 
 # 导入app.py并使用Flask测试客户端
 try:
@@ -130,7 +130,7 @@ print("3. 您也可以通过GitHub仓库的Actions页面手动触发运行")
 print("4. 构建产物会直接部署到GitHub Pages，无需额外配置GitHub Token")
 print("\n方式二：手动部署")
 print("1. 确保您已经在项目根目录")
-print("2. 直接将生成的index.html和background.jpg文件部署到您的Web服务器")
+print("2. 直接将生成的index.html和background.png文件部署到您的Web服务器")
 print("\n注意：")
 print("1. 使用GitHub Pages部署方式不需要配置GitHub Token")
 print("2. 部署不会在仓库中产生额外的提交记录")

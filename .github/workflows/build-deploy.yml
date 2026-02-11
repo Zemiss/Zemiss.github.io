@@ -51,7 +51,7 @@ jobs:
 
       # 5. 创建输出目录
       - name: Prepare output directory
-        run: mkdir -p output && cp index.html background.jpg output/
+        run: mkdir -p output && cp index.html background.png output/
 
       # 6. 设置GitHub Pages
       - name: Setup Pages

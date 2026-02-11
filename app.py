@@ -32,7 +32,7 @@ def load_config():
             with open('config.json', 'r', encoding='utf-8') as f:
                 config = json.load(f)
             
-            # 同时检查background.jpg是否存在，如果不存在也从default文件夹复制
+            # 同时检查background.png是否存在，如果不存在也从default文件夹复制
             if 'background' in config and 'image' in config['background']:
                 background_image = config['background']['image']
                 if not os.path.exists(background_image) and os.path.exists(os.path.join('default', background_image)):
@@ -819,7 +819,7 @@ def generate_static_html():
                 resources_to_copy.append(background_image)
         
         # 检查一些常见的资源文件
-        for file in ['background.jpg', '1background.jpg', 'favicon.ico']:
+        for file in ['background.png', '1background.png', 'favicon.ico']:
             if os.path.exists(file):
                 resources_to_copy.append(file)
         

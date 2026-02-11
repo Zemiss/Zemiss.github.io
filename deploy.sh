@@ -77,7 +77,7 @@ deploy_gh_pages() {
     echo ""
     echo "方法二：手动部署静态文件"
     echo "   - 运行 './deploy.sh build' 生成静态文件（HTML将直接生成在项目根目录）"
-    echo "   - 添加生成的文件: git add index.html background.jpg"
+    echo "   - 添加生成的文件: git add index.html background.png"
     echo "   - 提交更改: git commit -m 'Update static website'"
     echo "   - 推送到gh-pages分支: git push origin master:gh-pages"
     echo ""
