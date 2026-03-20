@@ -75,10 +75,10 @@
 Hello everyone, my name is Bo Xie (谢博). I am currently an undergraduate student in the School of Mathematical Sciences, Nankai University.I am proud to be a member of the inaugural Shiing-Shen Chern Class (Mathematical Sciences and Artificial Intelligence), majoring in Mathematics and minoring in Artificial Intelligence. Please feel free to contact me through **2411273@mail.nankai.edu.cn** if you are interested in my projects.
 
 My research interests lie in:
+  
+**Single-cell sequencing data analysis:**&nbsp; high-dimensional data analysis, statistical machine learning, and related topics.
 
-- **Single-cell sequencing data analysis:**&nbsp; high-dimensional data analysis, statistical machine learning, and related topics.
-
-- **RAW Image Denoising:**&nbsp;Low-light image enhancement, contrastive learning and so on.
+  **RAW Image Denoising:**&nbsp;Low-light image enhancement, contrastive learning and so on.
 
 
 <!--
