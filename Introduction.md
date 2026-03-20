@@ -72,16 +72,16 @@
 }
 </style>
 
-Hello everyone, my name is Bo Xie (谢博). I am currently an undergraduate student in the School of Mathematical Sciences, Nankai University.I am proud to be a member of the inaugural Shiing-Shen Chern Class (Mathematical Sciences and Artificial Intelligence), majoring in Mathematics and minoring in Artificial Intelligence. Please feel free to contact me through **1400695258@qq.com** if you are interested in my projects.
+Hello everyone, my name is Bo Xie (谢博). I am currently an undergraduate student in the School of Mathematical Sciences, Nankai University.I am proud to be a member of the inaugural Shiing-Shen Chern Class (Mathematical Sciences and Artificial Intelligence), majoring in Mathematics and minoring in Artificial Intelligence. Please feel free to contact me through **2411273@mail.nankai.edu.cn** if you are interested in my projects.
 
 My research interests lie in:
 
+- **Single-cell sequencing data analysis:**&nbsp; high-dimensional data analysis, statistical machine learning, and related topics.
+
 - **RAW Image Denoising:**&nbsp;Low-light image enhancement, contrastive learning and so on.
 
-<!--
-I have organized the [Course Note](https://github.com/Zemiss/NKNote)，[Lab Report](https://github.com/Zemiss/NKLab) for the Mathematical Sciences and Artificial Intelligence major courses at Nankai University, as well as the [Final Exam](https://github.com/Zemiss/NKExam) for theoretical courses. 
--->
 
+<!--
 # 📝 Publications 
 
 # 💰 Scholarships
@@ -90,15 +90,20 @@ I have organized the [Course Note](https://github.com/Zemiss/NKNote)，[Lab Repo
 
 # ⚙️ Projects
 
-# 📖 Educations
-
-- *2024.09 - 2028.06*, **[School of Mathematical Sciences](https://math.nankai.edu.cn/)(数学科学学院), [Nankai University](https://www.nankai.edu.cn/)(南开大学)**
-
-  *- Major in Mathematics & Minor in Artificial Intelligence (主修数学，辅修人工智能)*
-
 # 💬 Academic Services
 
 # 💻 Internships
+-->
+
+# 📖 Educations
+
+- *2026.03 - 2028.06*, **[School of Mathematical Sciences](https://math.nankai.edu.cn/)(数学科学学院), [Nankai University](https://www.nankai.edu.cn/)(南开大学)**
+
+  *- Major in Mathematics & Minor in Artificial Intelligence (主修数学，辅修人工智能)*
+
+- *2024.09 - 2026.02*, **[College of Computer Science](https://cc.nankai.edu.cn/)(计算机学院), [Nankai University](https://www.nankai.edu.cn/)(南开大学)**
+
+  *- Major in  Computer Science and Technology*
 
 
 </footer>
