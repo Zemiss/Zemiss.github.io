@@ -33,22 +33,22 @@ tags:
 ### 第7题
 
 **题目：设$n$为正整数，证明存在$n$阶多项式$p(x)$，使得
-$$\max_{-1\leq x\leq 1} \left|p(x)\right| = \inf_{(a_1,\dots,a_n)\in\mathbb{R}^n} \left\{ \max_{-1\leq x\leq 1} \left|x^n + a_1x^{n-1} + \dots + a_{n-1}x + a_n\right| \right\}.$$**
+$$\max_{-1\leq x\leq 1} \left\vert p(x)\right\vert = \inf_{(a_1,\dots,a_n)\in\mathbb{R}^n} \left\{ \max_{-1\leq x\leq 1} \left\vert x^n + a_1x^{n-1} + \dots + a_{n-1}x + a_n\right\vert \right\}.$$**
 
 **思路：**
-1.  **构造范数函数**：定义$g(a') = \max_{-1\leq x\leq1}\left|a_0x^n+\dots+a_n\right|$，验证它是$\mathbb{R}^{n+1}$上的范数，由有限维空间范数等价性，得$g$连续且$g(a')\geq c\left|a'\right|$（$c>0$为常数）。
-2.  **转化目标函数**：令$a'=(1,a)$（对应首项系数为1的多项式），定义$f(a)=g((1,a))$，则$f$连续，且由范数不等式得$f(a)\to+\infty$当$\left|a\right|\to+\infty$（强制性质）。
+1.  **构造范数函数**：定义$g(a') = \max_{-1\leq x\leq1}\left\vert a_0x^n+\dots+a_n\right\vert$，验证它是$\mathbb{R}^{n+1}$上的范数，由有限维空间范数等价性，得$g$连续且$g(a')\geq c\left\vert a'\right\vert$（$c>0$为常数）。
+2.  **转化目标函数**：令$a'=(1,a)$（对应首项系数为1的多项式），定义$f(a)=g((1,a))$，则$f$连续，且由范数不等式得$f(a)\to+\infty$当$\left\vert a\right\vert\to+\infty$（强制性质）。
 3.  **利用紧集极值定理**：连续函数在$\mathbb{R}^n$的紧集上必取到最小值，因此存在$b\in\mathbb{R}^n$使$f(b)=\inf_{a\in\mathbb{R}^n}f(a)$，对应多项式$p(x)=x^n+b_1x^{n-1}+\dots+b_n$即为所求。
 
 ### 第8题
 
 **条件：设$\Omega$是$\mathbb{R}^m$中的区域，$f(X)$定义在$\Omega$上，对于$X_0 \in \Omega$**
 
-*  如果对任给的$\varepsilon > 0$，存在$\delta > 0$，使得当$X \in \Omega$且$\left|X - X_0\right| < \delta$时，
+*  如果对任给的$\varepsilon > 0$，存在$\delta > 0$，使得当$X \in \Omega$且$\left\vert X - X_0\right\vert < \delta$时，
 $$f(X) < f(X_0) + \varepsilon,$$
 则称$f(X)$在$X_0$上半连续。
 
-*  如果对任给的$\varepsilon > 0$，存在$\delta > 0$，使得当$X \in \Omega$且$\left|X - X_0\right| < \delta$时，
+*  如果对任给的$\varepsilon > 0$，存在$\delta > 0$，使得当$X \in \Omega$且$\left\vert X - X_0\right\vert < \delta$时，
 $$f(X) > f(X_0) - \varepsilon,$$
 则称$f(X)$在$X_0$下半连续。
 
@@ -98,4 +98,4 @@ $$\sup_{m} f_m(X) < +\infty$$
 记 $m = \inf_\Omega f$，存在点列 $x_k\in\Omega$ 使得 $f(x_k)\to m$。
 
 3. **用紧性取收敛子列**
-$\Omega$ 紧，故 $x_k$ 有子列收敛到某点 $x^*\in\Omega$。再用下半连续性：$f(x^*) \le \liminf_{x_k} f(x_k) = m$而 $f(x^*) \ge m$ 恒成立，故 $f(x^*) = m$，即最小值可达。
+$\Omega$ 紧，故 $x_k$ 有子列收敛到某点 $x^*\in\Omega$。再用下半连续性$f(x^*) \le \liminf_{x_k} f(x_k) = m$而 $f(x^*) \ge m$ 恒成立，故 $f(x^*) = m$，即最小值可达。
