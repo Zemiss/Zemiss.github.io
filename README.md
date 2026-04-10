@@ -13,3 +13,7 @@ A personal academic &amp; growth blog hosted on GitHub Pages, recording study pl
 
 ## License
 MIT
+
+cd C:\Users\12445\Desktop\Zemiss.github.io
+bundle exec jekyll serve
+
