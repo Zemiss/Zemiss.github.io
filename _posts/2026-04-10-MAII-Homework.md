@@ -98,4 +98,5 @@ $$\sup_{m} f_m(X) < +\infty$$
 记 $m = \inf_\Omega f$，存在点列 $x_k\in\Omega$ 使得 $f(x_k)\to m$。
 
 3. **用紧性取收敛子列**
-$\Omega$ 紧，故 $x_k$ 有子列收敛到某点 x^\*。 再用下半连续性：$f(x^*) \le \liminf_{x_k} f(x_k) = m$，而 $f(x^*) \ge m$ 恒成立，故 $f(x^*) = m$，即最小值可达。
+$\Omega$ 紧，故 $x_k$ 有子列收敛到某点 $x^* \in \Omega$。 
+再用下半连续性：$f(x^*) \le \liminf_{x_k} f(x_k) = m$，而 $f(x^*) \ge m$ 恒成立，故 $f(x^*) = m$，即最小值可达。
