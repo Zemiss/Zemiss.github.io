@@ -1,0 +1,111 @@
+---
+layout: page
+title: "Tags"
+description: "按主题浏览课程笔记、周报、研究计划和随笔。"
+header-img: "img/home-bg.jpg"
+header-mask: 0.35
+---
+
+<div class="tag-index">
+  <p class="tag-index-intro">这里按标签汇总内容。每个标签下展示最近的几篇文章，方便按主题进入，而不是只按时间线浏览。</p>
+
+  <div class="tag-index-grid">
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+    <section class="tag-index-card">
+      <div class="tag-index-head">
+        <a class="tag-index-name" href="{{ '/archive/?tag=' | append: tag[0] | url_encode | prepend: site.baseurl }}">{{ tag[0] }}</a>
+        <span class="tag-index-count">{{ tag[1].size }} 篇</span>
+      </div>
+      <ul class="tag-index-posts">
+        {% assign recent_posts = tag[1] | sort: 'date' | reverse %}
+        {% for post in recent_posts limit:3 %}
+        <li>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .tag-index-intro {
+    margin-bottom: 24px;
+    color: #666666;
+  }
+
+  .tag-index-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .tag-index-card {
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid rgba(64, 64, 64, 0.1);
+    background: #fafafa;
+  }
+
+  .tag-index-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .tag-index-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #404040;
+  }
+
+  .tag-index-count {
+    color: #8a8a8a;
+    font-size: 13px;
+  }
+
+  .tag-index-posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tag-index-posts li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(64, 64, 64, 0.08);
+  }
+
+  .tag-index-posts li:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .tag-index-posts a {
+    color: #404040;
+  }
+
+  .tag-index-posts span {
+    flex-shrink: 0;
+    color: #8a8a8a;
+    font-size: 13px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .tag-index-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .tag-index-posts li {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+</style>

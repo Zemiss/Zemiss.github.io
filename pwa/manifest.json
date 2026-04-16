@@ -1,7 +1,10 @@
+---
+layout: null
+---
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
-  "description": "About an engineer & designer who loves web.",
+  "name": "Zemiss Blog",
+  "short_name": "Zemiss",
+  "description": "A personal academic and growth blog about math, AI, bioinformatics, and weekly learning records.",
   "icons": [{
     "src": "icons/128.png",
     "sizes": "128x128",
@@ -11,9 +14,10 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "background_color": "#fff",
-  "theme_color": "#000",
-  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "start_url": "{{ site.baseurl }}/",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "lang": "zh-CN"
 }

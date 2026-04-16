@@ -9,7 +9,7 @@
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br>
-                    Powered by <a href="http://zemiss.github.io">Zemiss Blog</a> |
+                    Powered by <a href="https://zemiss.github.io/">Zemiss Blog</a> |
                     <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
                         height="20px"
                         src="https://ghbtns.com/github-btn.html?user=zemiss&repo=zemiss.github.io&type=star&count=true">
@@ -21,22 +21,22 @@
 </footer>
 
 <!-- jQuery -->
-<script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
-<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="{{ "/js/hux-blog.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/hux-blog.min.js' | prepend: site.baseurl }}"></script>
 
 <!-- Simple Jekyll Search -->
-<script src="{{ "/js/simple-jekyll-search.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/simple-jekyll-search.min.js' | prepend: site.baseurl }}"></script>
 
 <!-- Service Worker -->
 {% if site.service-worker %}
-<script src="{{ "/js/snackbar.js " | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/sw-registration.js " | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/snackbar.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/sw-registration.js' | prepend: site.baseurl }}"></script>
 {% endif %}
 
 <!-- async load function -->
@@ -103,7 +103,7 @@
         $('#tag_cloud a').tagcloud();
     })
 </script>
-<script src='{{ "/js/archive.js " | prepend: site.baseurl }}'></script>
+<script src='{{ '/js/archive.js' | prepend: site.baseurl }}'></script>
 {% endif %}
 
 <!--fastClick.js -->
@@ -284,7 +284,7 @@
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('search-results'),
-        json: '/search.json',
+        json: '{{ "/search.json" | prepend: site.baseurl }}',
         searchResultTemplate: '<div class="post-preview item"><a href="{url}"><h2 class="post-title">{title}</h2><h3 class="post-subtitle">{subtitle}</h3><hr></a></div>',
         noResultsText: 'No results',
         limit: 50,

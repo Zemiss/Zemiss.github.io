@@ -3,8 +3,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="keywords" content="{{ site.keyword }}">
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | normalize_whitespace | escape }}{% else %}{{ site.description | strip_html | normalize_whitespace | escape }}{% endif %}">
+    <meta name="keywords" content="{{ site.keyword | escape }}">
+    <meta name="author" content="{% if page.author %}{{ page.author | escape }}{% else %}{{ site.title | escape }}{% endif %}">
     <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
 
     <!-- Open Graph -->
@@ -28,9 +29,13 @@
     <meta property="og:description"
         content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% endcase %}
-    <meta property="og:image" content="{{ site.url }}{{ site.sidebar-avatar }}">
+    <meta property="og:image" content="{% if page.header-img %}{{ page.header-img | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.sidebar-avatar }}{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.SEOTitle }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | normalize_whitespace | escape }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncate:200 | escape }}{% else %}{{ site.description | strip_html | normalize_whitespace | escape }}{% endif %}">
+    <meta name="twitter:image" content="{% if page.header-img %}{{ page.header-img | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.sidebar-avatar }}{% endif %}">
 
     <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
 
@@ -44,10 +49,10 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ " /css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | prepend: site.baseurl }}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ " /css/hux-blog.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/hux-blog.min.css' | prepend: site.baseurl }}">
 
     <!-- Custom Fonts -->
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
@@ -69,4 +74,44 @@
     <!-- Google AdSense -->
     <script data-ad-client="ca-pub-6487568398225121" async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <style>
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-brand:hover,
+        .navbar-custom .navbar-brand:focus,
+        .navbar-custom .navbar-brand:active,
+        .navbar-custom .navbar-brand:focus-visible,
+        .navbar-custom.invert .navbar-brand,
+        .navbar-custom.invert .navbar-brand:hover,
+        .navbar-custom.invert .navbar-brand:focus,
+        .navbar-custom.invert .navbar-brand:active,
+        .navbar-custom.invert .navbar-brand:focus-visible,
+        .navbar-custom.is-fixed .navbar-brand,
+        .navbar-custom.is-fixed .navbar-brand:hover,
+        .navbar-custom.is-fixed .navbar-brand:focus,
+        .navbar-custom.is-fixed .navbar-brand:active,
+        .navbar-custom.is-fixed .navbar-brand:focus-visible {
+            color: inherit;
+            outline: none !important;
+            box-shadow: none !important;
+            text-decoration: none !important;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .post-preview > a,
+        .post-preview > a:hover,
+        .post-preview > a:focus,
+        .post-preview > a:active,
+        .post-preview > a:focus-visible,
+        .mini-post-list .post-preview > a,
+        .mini-post-list .post-preview > a:hover,
+        .mini-post-list .post-preview > a:focus,
+        .mini-post-list .post-preview > a:active,
+        .mini-post-list .post-preview > a:focus-visible {
+            outline: none !important;
+            box-shadow: none !important;
+            text-decoration: none !important;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
 </head>

@@ -995,6 +995,11 @@ samp {
 .navbar-custom .navbar-brand:hover {
   color: rgba(255, 255, 255, 0.8);
 }
+.navbar-custom .navbar-brand:focus {
+  color: white;
+  outline: none;
+  text-decoration: none;
+}
 .navbar-custom .nav li a {
   text-transform: uppercase;
   font-size: 12px;
@@ -1022,6 +1027,11 @@ samp {
   .navbar-custom .navbar-brand:focus {
     color: rgba(255, 255, 255, 0.8);
   }
+  .navbar-custom .navbar-brand:focus {
+    color: white;
+    outline: none;
+    text-decoration: none;
+  }
   .navbar-custom .nav li a {
     color: white;
     padding: 20px;
@@ -1046,6 +1056,11 @@ samp {
 .navbar-custom.invert .navbar-brand:hover,
 .navbar-custom.invert .navbar-brand:focus {
   color: #0085a1;
+}
+.navbar-custom.invert .navbar-brand:focus {
+  color: #404040;
+  outline: none;
+  text-decoration: none;
 }
 .navbar-custom.invert .nav li a {
   color: #404040;
@@ -1084,6 +1099,11 @@ samp {
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
     color: #0085a1;
+  }
+  .navbar-custom.is-fixed .navbar-brand:focus {
+    color: #404040;
+    outline: none;
+    text-decoration: none;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
