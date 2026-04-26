@@ -8,7 +8,7 @@ I am currently an undergraduate student in the School of Mathematical Sciences, 
 
 ## 📖 Educations
 
-- **Major in Information and Computing Science & Minor in Intelligent Science and Technology** &emsp; 📌 2024.09 — 2028.06
+- **Major in Mathematics, Minor in Artificial Intelligence** &emsp; 📌 2024.09 — 2028.06
   - School of Mathematical Sciences, Nankai University, Tianjin, China
 
 
