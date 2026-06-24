@@ -1,0 +1,59 @@
+/*
+ * Site-wide refinements that sit on top of the upstream Hux Blog stylesheet.
+ */
+
+.intro-header .site-heading,
+.intro-header .page-heading {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 135px 0 118px;
+  text-align: center;
+}
+
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
+  max-width: 720px;
+  margin: 0 auto 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.02;
+  color: #fff;
+  text-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.intro-header .site-heading .subheading,
+.intro-header .page-heading .subheading {
+  max-width: 520px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "STKaiti", "KaiTi", "Kaiti SC", "FangSong", "STFangsong", "Songti SC", SimSun, serif;
+  font-size: 23px;
+  line-height: 1.75;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media only screen and (min-width: 1200px) {
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 68px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .intro-header .site-heading,
+  .intro-header .page-heading {
+    padding: 106px 0 80px;
+  }
+
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 42px;
+  }
+
+  .intro-header .site-heading .subheading,
+  .intro-header .page-heading .subheading {
+    font-size: 18px;
+  }
+}

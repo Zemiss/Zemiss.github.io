@@ -1,0 +1,288 @@
+/*
+ * Home page polish.
+ * Scoped to index.html via page.home-style so other Jekyll pages keep the
+ * inherited Hux Blog layout.
+ */
+
+:root {
+  --home-ink: #17212b;
+  --home-muted: #66717f;
+  --home-line: #dfe5ea;
+  --home-teal: #007d8f;
+  --home-gold: #b98528;
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(251, 250, 247, 0.94) 0%, #fff 460px),
+    #fff;
+}
+
+.intro-header {
+  position: relative;
+  min-height: 420px;
+  margin-bottom: 0;
+  isolation: isolate;
+}
+
+.intro-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(12, 20, 27, 0.4), rgba(12, 20, 27, 0.08) 56%, rgba(12, 20, 27, 0.28)),
+    linear-gradient(180deg, rgba(8, 16, 22, 0.02), rgba(8, 16, 22, 0.34));
+}
+
+.intro-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.intro-header .site-heading {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 135px 0 118px;
+  text-align: center;
+}
+
+.intro-header .site-heading h1 {
+  max-width: 720px;
+  margin: 0 auto 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.02;
+  color: #fff;
+  text-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.intro-header .site-heading .subheading {
+  max-width: 520px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 23px;
+  line-height: 1.75;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.home-index {
+  position: relative;
+  padding: 34px 0 10px;
+}
+
+.home-section-header {
+  margin: 4px 0 28px;
+  padding: 0 0 24px;
+  border-bottom: 1px solid var(--home-line);
+}
+
+.home-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--home-gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-section-header h2 {
+  margin: 0;
+  color: var(--home-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  font-size: 34px;
+  line-height: 1.18;
+}
+
+.home-section-header p {
+  max-width: 620px;
+  margin: 12px 0 0;
+  color: var(--home-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.home-index .post-preview {
+  position: relative;
+  margin: 0;
+  padding: 26px 0 28px;
+  border-bottom: 1px solid var(--home-line);
+}
+
+.home-index .post-preview:first-of-type {
+  padding-top: 6px;
+}
+
+.home-index .post-preview > a {
+  display: block;
+  color: var(--home-ink);
+}
+
+.home-index .post-preview > a:hover,
+.home-index .post-preview > a:focus {
+  color: var(--home-teal);
+}
+
+.home-post-date {
+  margin-bottom: 10px;
+  color: var(--home-gold);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.home-index .post-preview > a > .post-title {
+  margin: 0 0 8px;
+  color: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  font-size: 28px;
+  line-height: 1.24;
+}
+
+.home-index .post-preview > a > .post-subtitle {
+  margin: 0 0 12px;
+  color: #3f4c59;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.home-index .post-content-preview {
+  max-width: 680px;
+  color: var(--home-muted);
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.85;
+}
+
+.home-index .post-preview > a:hover .post-content-preview,
+.home-index .post-preview > a:focus .post-content-preview {
+  color: #43505d;
+}
+
+.home-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.home-post-tags a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border: 1px solid rgba(0, 125, 143, 0.24);
+  border-radius: 999px;
+  color: var(--home-teal);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  background: rgba(0, 125, 143, 0.045);
+}
+
+.home-post-tags a:hover,
+.home-post-tags a:focus {
+  border-color: var(--home-teal);
+  color: #fff;
+  background: var(--home-teal);
+  text-decoration: none;
+}
+
+.home-index .pager {
+  margin-top: 34px !important;
+}
+
+.home-index .pager li > a {
+  border: 1px solid var(--home-line);
+  border-radius: 4px;
+  color: var(--home-ink);
+  background: #fff;
+}
+
+.home-index .pager li > a:hover,
+.home-index .pager li > a:focus {
+  border-color: var(--home-teal);
+  background: var(--home-teal);
+}
+
+@media only screen and (min-width: 992px) {
+  .postlist-container {
+    padding-right: 52px;
+  }
+
+  .home-index .post-preview {
+    padding-right: 18px;
+  }
+
+  .home-index .post-preview::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: -22px;
+    width: 3px;
+    height: 34px;
+    border-radius: 2px;
+    background: transparent;
+    transition: background 0.18s ease, height 0.18s ease;
+  }
+
+  .home-index .post-preview:hover::before,
+  .home-index .post-preview:focus-within::before {
+    height: 52px;
+    background: var(--home-gold);
+  }
+
+  .sidebar-container {
+    padding-top: 34px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .intro-header .site-heading h1 {
+    font-size: 68px;
+  }
+
+  .home-section-header h2 {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .intro-header {
+    min-height: 320px;
+  }
+
+  .intro-header .site-heading {
+    padding: 106px 0 80px;
+    text-align: center;
+  }
+
+  .intro-header .site-heading h1 {
+    font-size: 42px;
+  }
+
+  .intro-header .site-heading .subheading {
+    font-size: 18px;
+  }
+
+  .home-index {
+    padding-top: 22px;
+  }
+
+  .home-section-header h2 {
+    font-size: 27px;
+  }
+
+  .home-index .post-preview {
+    padding: 24px 0 25px;
+  }
+
+  .home-index .post-preview > a > .post-title {
+    font-size: 24px;
+  }
+}

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Tags"
+title: "TAGS"
 description: "争渡，争渡"
 header-img: "img/home-bg.jpg"
 header-mask: 0.35
@@ -33,7 +33,6 @@ header-mask: 0.35
 <div class="tag-feed" id="tag-feed-view" hidden>
   <div class="tag-feed-meta">
     <a class="tag-feed-back" href="{{ '/tags/' | prepend: site.baseurl }}">← 返回全部标签</a>
-    <span class="tag-feed-count" id="tag-feed-count"></span>
   </div>
 
   <div id="tag-feed-empty" class="tag-feed-empty" hidden>
@@ -54,6 +53,7 @@ header-mask: 0.35
     {% endfor %}
     <div class="post-preview tag-feed-item" data-tags="{{ encoded_tags }}" hidden>
       <a href="{{ post.url | prepend: site.baseurl }}">
+        <div class="tag-feed-date">{{ post.date | date: "%b %-d, %Y" }}</div>
         <h2 class="post-title">{{ post.title }}</h2>
         {% if post.subtitle %}
         <h3 class="post-subtitle">{{ post.subtitle }}</h3>
@@ -66,9 +66,6 @@ header-mask: 0.35
           {% endif %}
         </div>
       </a>
-      <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-      </p>
     </div>
     <hr class="tag-feed-divider" hidden>
     {% endfor %}
@@ -143,20 +140,22 @@ header-mask: 0.35
   }
 
   .tag-feed-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
     margin-bottom: 24px;
   }
 
   .tag-feed-back {
     color: #666666;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
   }
 
-  .tag-feed-count {
-    color: #8a8a8a;
-    font-size: 13px;
+  .tag-feed-back:hover,
+  .tag-feed-back:focus {
+    color: #007d8f;
+    text-decoration: none;
   }
 
   .tag-feed-empty {
@@ -165,6 +164,67 @@ header-mask: 0.35
     border: 1px solid rgba(64, 64, 64, 0.1);
     background: #fafafa;
     color: #666666;
+  }
+
+  .tag-feed .post-preview {
+    position: relative;
+    margin: 0;
+    padding: 26px 0 28px;
+    border-bottom: 1px solid #dfe5ea;
+  }
+
+  .tag-feed .post-preview:first-of-type {
+    padding-top: 6px;
+  }
+
+  .tag-feed .post-preview > a {
+    display: block;
+    color: #17212b;
+  }
+
+  .tag-feed .post-preview > a:hover,
+  .tag-feed .post-preview > a:focus {
+    color: #007d8f;
+    text-decoration: none;
+  }
+
+  .tag-feed-date {
+    margin-bottom: 10px;
+    color: #b98528;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .tag-feed .post-preview > a > .post-title {
+    margin: 0 0 8px;
+    color: inherit;
+    font-size: 28px;
+    line-height: 1.24;
+  }
+
+  .tag-feed .post-preview > a > .post-subtitle {
+    margin: 0 0 12px;
+    color: #3f4c59;
+    font-size: 16px;
+    line-height: 1.55;
+    font-weight: 400;
+  }
+
+  .tag-feed .post-content-preview {
+    max-width: 680px;
+    color: #66717f;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.85;
+  }
+
+  .tag-feed .post-preview > a:hover .post-content-preview,
+  .tag-feed .post-preview > a:focus .post-content-preview {
+    color: #43505d;
+  }
+
+  .tag-feed-divider {
+    display: none;
   }
 
   .tag-feed-item[hidden],
@@ -182,9 +242,12 @@ header-mask: 0.35
       gap: 4px;
     }
 
-    .tag-feed-meta {
-      flex-direction: column;
-      align-items: flex-start;
+    .tag-feed .post-preview {
+      padding: 24px 0 25px;
+    }
+
+    .tag-feed .post-preview > a > .post-title {
+      font-size: 24px;
     }
   }
 </style>
@@ -215,7 +278,6 @@ header-mask: 0.35
       var subheading = document.querySelector('.intro-header .site-heading .subheading');
       var indexView = document.getElementById('tag-index-view');
       var feedView = document.getElementById('tag-feed-view');
-      var countNode = document.getElementById('tag-feed-count');
       var emptyNode = document.getElementById('tag-feed-empty');
       var items = Array.prototype.slice.call(document.querySelectorAll('.tag-feed-item'));
       var dividers = Array.prototype.slice.call(document.querySelectorAll('.tag-feed-divider'));
@@ -238,7 +300,7 @@ header-mask: 0.35
       }
 
       if (subheading) {
-        subheading.textContent = '这个标签下的全部文章';
+        subheading.textContent = '此标签下的文章';
       }
 
       items.forEach(function(item, index) {
@@ -253,10 +315,6 @@ header-mask: 0.35
           visibleCount += 1;
         }
       });
-
-      if (countNode) {
-        countNode.textContent = visibleCount + ' 篇文章';
-      }
 
       if (emptyNode) {
         emptyNode.hidden = visibleCount !== 0;

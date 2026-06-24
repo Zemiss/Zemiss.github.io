@@ -1,11 +1,20 @@
 ---
 layout: page
 description: "彼方尚有荣光在"
+home-style: true
 ---
+
+<section class="home-index" aria-label="Latest posts">
+<div class="home-section-header">
+    <span class="home-eyebrow">Latest Notes</span>
+    <h2>学习笔记与长期记录</h2>
+    <p>按时间整理近期文章，保留清晰的阅读入口和轻量摘要。</p>
+</div>
 
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
+        <div class="home-post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
         <h2 class="post-title">
             {{ post.title }}
         </h2>
@@ -22,11 +31,14 @@ description: "彼方尚有荣光在"
             {% endif %}
         </div>
     </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
+    {% if post.tags.size > 0 %}
+    <div class="home-post-tags">
+        {% for tag in post.tags limit:3 %}
+        <a href="{{ site.baseurl }}/tags/?tag={{ tag | url_encode }}">{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
 </div>
-<hr>
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
@@ -43,3 +55,4 @@ description: "彼方尚有荣光在"
     {% endif %}
 </ul>
 {% endif %}
+</section>
